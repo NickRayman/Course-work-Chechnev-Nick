@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 /*
  ласс клетка (Cell), дл€ работы с шашками
 */
@@ -15,7 +14,7 @@ public:
 	/*
 	 онструктор и деструктор
 	*/
-	Cell(const pair <size_t, size_t>& cPosition, State cstate);
+	Cell(/*const pair <size_t, size_t>& cPosition,*/ State cstate);
 	~Cell();
 
 	/*
@@ -28,12 +27,12 @@ public:
 	сеттеры
 	*/
 	void SetState(State cState); 
-	void SetPosition(const pair <size_t, size_t>& cPosition);
+	/*void SetPosition(const pair <size_t, size_t>& cPosition);*/
 
 
 private:
 	State cState;
-	pair <size_t, size_t> cPosition; //шаблон дл€ координат шашек на поле
+	//pair <size_t, size_t> cPosition; //шаблон дл€ координат шашек на поле
 	
 };
 
