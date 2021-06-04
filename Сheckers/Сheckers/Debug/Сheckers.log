@@ -1,15 +1,6 @@
 ﻿  Board.cpp
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xhash(131,53): error C2064: результатом вычисления фрагмента не является функция, принимающая 1 аргументов
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xhash(155): message : выполняется компиляция ссылки на шаблон переменной "const bool _Nothrow_hash<std::hash<std::pair<unsigned int,unsigned int> >,std::pair<unsigned int,unsigned int> >"
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xhash(155): message : во время компиляции функции-члена класс шаблон "size_t std::_Uhash_compare<_Kty,_Hasher,_Keyeq>::operator ()<std::pair<size_t,size_t>>(const _Keyty &) noexcept(<expr>) const"
-          with
-          [
-              _Kty=std::pair<size_t,size_t>,
-              _Hasher=std::hash<std::pair<size_t,size_t>>,
-              _Keyeq=std::equal_to<std::pair<size_t,size_t>>,
-              _Keyty=std::pair<size_t,size_t>
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\unordered_map(387): message : во время компиляции функции-члена класс шаблон "Cell &std::unordered_map<std::pair<size_t,size_t>,Cell,std::hash<std::pair<size_t,size_t>>,std::equal_to<std::pair<size_t,size_t>>,std::allocator<std::pair<const std::pair<size_t,size_t>,Cell>>>::at(const std::pair<size_t,size_t> &)"
-C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Сheckers\Board.cpp(46): message : выполняется компиляция ссылки на экземпляр шаблон функции "Cell &std::unordered_map<std::pair<size_t,size_t>,Cell,std::hash<std::pair<size_t,size_t>>,std::equal_to<std::pair<size_t,size_t>>,std::allocator<std::pair<const std::pair<size_t,size_t>,Cell>>>::at(const std::pair<size_t,size_t> &)"
-C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Сheckers\Board.h(32): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "std::unordered_map<std::pair<size_t,size_t>,Cell,std::hash<std::pair<size_t,size_t>>,std::equal_to<std::pair<size_t,size_t>>,std::allocator<std::pair<const std::pair<size_t,size_t>,Cell>>>"
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910\include\xhash(130,44): error C2056: недопустимое выражение
+  InOut.cpp
+  Создание кода...
+C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Сheckers\InOut.cpp(25): warning C4172: возвращение адреса локальной или временной переменной : position
+C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Сheckers\InOut.cpp(61): warning C4172: возвращение адреса локальной или временной переменной : result
+  Сheckers.vcxproj -> C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Debug\Сheckers.exe

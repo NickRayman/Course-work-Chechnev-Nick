@@ -141,11 +141,13 @@
   <ItemGroup>
     <ClCompile Include="Board.cpp" />
     <ClCompile Include="Cell.cpp" />
+    <ClCompile Include="InOut.cpp" />
     <ClCompile Include="Сheckers.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Board.h" />
     <ClInclude Include="Cell.h" />
+    <ClInclude Include="InOut.h" />
     <ClInclude Include="MoveResult.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="State.h" />

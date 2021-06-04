@@ -56,6 +56,11 @@ MoveResult Board::MakeMove(const pair<size_t, size_t>& startPos, const pair<size
 	return moveResult;
 }
 
+const map<pair<size_t, size_t>, Cell>& Board::GetMap() const
+{
+	return cCells;
+}
+
 MoveResult Board::CheckMove(const pair<size_t, size_t>& startPos, const pair<size_t, size_t>& endPos, bool direction)
 {
 	MoveResult result = MoveResult::PRHOBITED;
