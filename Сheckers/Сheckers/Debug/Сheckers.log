@@ -1,6 +1,2 @@
-﻿  Board.cpp
-  InOut.cpp
-  Создание кода...
-C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Сheckers\InOut.cpp(25): warning C4172: возвращение адреса локальной или временной переменной : position
-C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Сheckers\InOut.cpp(61): warning C4172: возвращение адреса локальной или временной переменной : result
+﻿  Game.cpp
   Сheckers.vcxproj -> C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Сheckers\Debug\Сheckers.exe

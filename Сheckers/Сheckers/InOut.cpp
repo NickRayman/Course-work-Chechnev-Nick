@@ -8,7 +8,7 @@ InOut::~InOut()
 {
 }
 
-const pair<pair<size_t, size_t>, pair<size_t, size_t>>& InOut::GetMove()
+pair<pair<size_t, size_t>, pair<size_t, size_t>> InOut::GetMove()
 {
     size_t p1, p2;
 
@@ -22,26 +22,28 @@ const pair<pair<size_t, size_t>, pair<size_t, size_t>>& InOut::GetMove()
     position.second.first = p2 / 10;
     position.second.second = p2 - 10 * position.second.first;
 
-    return position;
+    return move(position);
 }
 
 void InOut::DrawBoard(const map<pair<size_t, size_t>, Cell>& board)
 {
-    size_t cBoardSize = board.size();
+    size_t cBoardSize = sqrt(board.size());
 
     for (size_t i = 0; i < cBoardSize; i++) {
 
-        cout << "|" << endl;
+        cout << "|";
         for (size_t j = 0; j < cBoardSize; j++) {
 
             cout << CastState(board.at(pair<size_t, size_t>(i, j)).GetState());
-            cout << "|" << endl;
+            cout << "|";
         }
-       
+        cout << endl;
     }
+    cout << endl;
+    cout << endl;
 }
 
-const string& InOut::CastState(State state)
+string InOut::CastState(State state)
 {
     string result;
     
@@ -58,7 +60,7 @@ const string& InOut::CastState(State state)
         break;
     }
 
-    return result;
+    return move(result);
 }
 
 

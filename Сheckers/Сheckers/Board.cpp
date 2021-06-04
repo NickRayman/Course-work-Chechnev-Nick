@@ -50,7 +50,7 @@ MoveResult Board::MakeMove(const pair<size_t, size_t>& startPos, const pair<size
 
 		cCells.at(endPos).SetState(cCells.at(startPos).GetState());
 		cCells.at(startPos).SetState(State::BLANK);
-		cCells.at(pair <size_t, size_t>((startPos.first) / 2, (startPos.second) / 2)).SetState(State::BLANK);
+		cCells.at(pair <size_t, size_t>((startPos.first + endPos.first) / 2, (startPos.second + endPos.second) / 2)).SetState(State::BLANK);
 		break;
 	}
 	return moveResult;
@@ -64,20 +64,18 @@ const map<pair<size_t, size_t>, Cell>& Board::GetMap() const
 MoveResult Board::CheckMove(const pair<size_t, size_t>& startPos, const pair<size_t, size_t>& endPos, bool direction)
 {
 	MoveResult result = MoveResult::PRHOBITED;
-	const int dX = endPos.first - startPos.first;
-	const int dY = endPos.second - startPos.second;
+	const int dY = endPos.first - startPos.first;
+	const int dX = endPos.second - startPos.second;
 	bool isCombat = false;
 	
 	if (endPos.first >= 0 && endPos.first < cBoardSize && endPos.second >= 0 && endPos.second < cBoardSize) {
 
 		auto targetCellState = cCells.at(endPos).GetState();
-		if (targetCellState == State::BLANK) {
-
-			pair<size_t, size_t> victimPos((endPos.first - endPos.first) / 2, (startPos.second + endPos.second) / 2);
-			auto vistimCellState = cCells.at(victimPos).GetState();
-			auto startCellState = cCells.at(startPos).GetState();
-				
+		if (targetCellState == State::BLANK) {				
 			if (abs(dX) == 2 && abs(dY) == 2) {
+				pair<size_t, size_t> victimPos((startPos.first + endPos.first) / 2, (startPos.second + endPos.second) / 2);
+				auto vistimCellState = cCells.at(victimPos).GetState();
+				auto startCellState = cCells.at(startPos).GetState();
 
 				if (targetCellState != vistimCellState && startCellState != vistimCellState)
 					result = MoveResult::SUCCESSFUL_COMBAT;

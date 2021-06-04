@@ -17,7 +17,7 @@ public:
 	/*
 	Возвращает позицию каждой клетки
 	*/
-	static const pair<pair<size_t, size_t>, pair<size_t, size_t>>& GetMove();
+	static pair<pair<size_t, size_t>, pair<size_t, size_t>> GetMove();
 	/*
 	Заполняет доску string клетками
 	*/
@@ -26,7 +26,7 @@ private:
 	/*
 	Определяет позиции в string
 	*/
-	static const string& CastState(State state);
+	static string CastState(State state);
 
 };
 
