@@ -68,7 +68,9 @@ MoveResult Board::CheckMove(const pair<size_t, size_t>& startPos, const pair<siz
 	const int dX = endPos.second - startPos.second;
 	bool isCombat = false;
 	
-	if (endPos.first >= 0 && endPos.first < cBoardSize && endPos.second >= 0 && endPos.second < cBoardSize) {
+	if (dX == 0 && dY == 0 && endPos.first == 0 && endPos.second == 0)
+		result = MoveResult::FF;
+	else if (endPos.first >= 0 && endPos.first < cBoardSize && endPos.second >= 0 && endPos.second < cBoardSize) {
 
 		auto targetCellState = cCells.at(endPos).GetState();
 		if (targetCellState == State::BLANK) {				

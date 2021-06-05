@@ -25,6 +25,13 @@ void Game::Start()
 			moveResult = cBoard.MakeMove(newMove.first, newMove.second, GetDirection(), direction);
 		}
 			
+		//Проверить ff
+		if (moveResult == MoveResult::FF) {
+			cIsSurrender = true;
+			break;
+		}
+			
+
 		//Разбор результата перемещения
 		if (moveResult == MoveResult::SUCCESSFUL_COMBAT) {
 			
@@ -36,6 +43,7 @@ void Game::Start()
 			SwitchPlayer();
 			//Проверить ход результата
 	}
+	cIO.endGame(CastPlayer(GetWinner()));
 	
 	
 	
@@ -62,29 +70,59 @@ Player Game::GetWinner() const
 	return winner;
 }
 
+string Game::CastPlayer(Player player) const
+{
+	string playerStr;
+
+	switch (player) {
+
+	case Player::WHITE:
+			playerStr = "White player";
+			break;
+	default:
+		playerStr = "Black player";
+		break;
+	}
+	return playerStr;
+}
+
+string Game::GetCurrentPlayer() const
+{
+	string player;
+	if (cLastPlayer == Player::WHITE)
+		player = "Black";
+	else
+		player = "White";
+	return move(player);
+
+}
+
 void Game::UpdateScore()
 {
 	if (cLastPlayer == Player::WHITE)
 		cBlackScore++;
-	else cWhiteScore++;
+	else 
+		cWhiteScore++;
 }
 
 void Game::SwitchPlayer()
 {
 	if (cLastPlayer == Player::WHITE)
 		cLastPlayer = Player::BLACK;
-	else cLastPlayer = Player::WHITE;
+	else 
+		cLastPlayer = Player::WHITE;
 }
 
 pair<pair<size_t, size_t>, pair<size_t, size_t>> Game::makeIO()
 {
 	//Напечатать доску
 	system("cls");
+	cIO.PrintScore(cWhiteScore, cBlackScore);
 	auto map = cBoard.GetMap();
 	cIO.DrawBoard(map);
 
 	//Попросите сделать ход
-	auto newMove = cIO.GetMove();
+	auto newMove = cIO.GetMove(GetCurrentPlayer());
 
 	return move(newMove);
 }

@@ -1,7 +1,7 @@
 #pragma once
 #include "Cell.h"
 #include "MoveResult.h"
-#include <map> //подключу мапу (коллекцию, улучшенный массив с ключами) для удобства в работе
+#include <map>//подключу мапу (коллекцию, улучшенный массив с ключами) для удобства в работе
 
 using namespace std;
 

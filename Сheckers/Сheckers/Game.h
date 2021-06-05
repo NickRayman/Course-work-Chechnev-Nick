@@ -18,6 +18,8 @@ public:
 	*/
 	Player GetWinner() const;
 private:
+	string CastPlayer(Player player) const;
+	string GetCurrentPlayer() const;
 	void UpdateScore();
 	void SwitchPlayer();
 	pair<pair<size_t, size_t>, pair<size_t, size_t>> makeIO();
