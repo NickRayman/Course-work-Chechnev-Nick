@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Calculation.cpp" />
     <ClCompile Include="CheckersBoard.cpp" />
     <ClCompile Include="CheckersManager.cpp" />
     <ClCompile Include="Сheckers.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Calculation.h" />
     <ClInclude Include="CellTypes.h" />
     <ClInclude Include="CheckersBoard.h" />
     <ClInclude Include="CheckersManager.h" />

@@ -22,7 +22,7 @@ public:
 	bool moveDraught(int from, int to);//функция двигает шашку
 	bool checkRegulations(int from, CellTypes cell);//функция для проверки на нарушения правил
 	bool checkEndGame();//функция для проверки окончания игры
-	int* possibleЬMoves(int from, bool figth = false);//функция для получения количества возмодных ходов шашки
+	int* possibleЬMoves(int from, bool fight = false);//функция для получения количества возмодных ходов шашки
 	int* possibleDraughts(CellTypes cell);//функция для получения количества шашек, которыми можно сходить
 	CellTypes getCell(int row, int col);//функция возвращает тип клетки, по данной координате
 	int rowAndColToNum(int row, int col);//функция для перевода строки и колонки в номер клетки

@@ -340,7 +340,7 @@ bool CheckersBoard::checkEndGame()
     return false;
 }
 
-int* CheckersBoard::possible‹Moves(int from, bool figth)
+int* CheckersBoard::possible‹Moves(int from, bool fight)
 {
     int row, col;
     int* flashes = new int[4];
@@ -351,7 +351,7 @@ int* CheckersBoard::possible‹Moves(int from, bool figth)
     for (int i = 0; i < 4; i++)
         flashes[i] = 0;
     int value = 0;
-    bool pl_figth = figth;
+    bool pl_fight = fight;
 
     //◊ËÒÎÓ ‚ÓÁÏÓ‰Ì˚ı ıÓ‰Ó‚ ˜ÂÌÓÈ ‰‡ÏÍË
     if (cell = BLACK_KING) {
@@ -365,13 +365,13 @@ int* CheckersBoard::possible‹Moves(int from, bool figth)
 
                         flashes[value] = rowAndColToNum(row + i * 2, col + j * 2);
                         value++;
-                        pl_figth = true;
+                        pl_fight = true;
                     }
                 }
             }
         }
     }
-    if (cell == BLACK_KING && !pl_figth) {
+    if (cell == BLACK_KING && !pl_fight) {
         for (int i = -1; i <= 1; i += 2) {
             for (int j = -1; j <= 1; j += 2) {
                 if (!checkBounds(row + i, col + j))
@@ -394,12 +394,12 @@ int* CheckersBoard::possible‹Moves(int from, bool figth)
 
                     flashes[value] = rowAndColToNum(row + 2, col + j * 2);
                     value++;
-                    pl_figth = true;
+                    pl_fight = true;
                 }
             }
         }
     }
-    if (cell == BlACK_DRAUGHT && !pl_figth) {
+    if (cell == BlACK_DRAUGHT && !pl_fight) {
         for (int j = -1; j <= 1; j += 2) {
             if (!checkBounds(row + 1, col + j))
                 continue;
@@ -422,13 +422,13 @@ int* CheckersBoard::possible‹Moves(int from, bool figth)
 
                         flashes[value] = rowAndColToNum(row + i * 2, col + j * 2);
                         value++;
-                        pl_figth = true;
+                        pl_fight = true;
                     }
                 }
             }
         }
     }
-    if (cell == WHITE_KING && !pl_figth) {
+    if (cell == WHITE_KING && !pl_fight) {
         for (int i = -1; i <= 1; i += 2) {
             for (int j = -1; j <= 1; j += 2) {
                 if (!checkBounds(row + i, col + j))
@@ -451,12 +451,12 @@ int* CheckersBoard::possible‹Moves(int from, bool figth)
 
                     flashes[value] = rowAndColToNum(row - 2, col + j * 2);
                     value++;
-                    pl_figth = true;
+                    pl_fight = true;
                 }
             }
         }
     }
-    if (cell == WHITE_DRAUGHT && !pl_figth) {
+    if (cell == WHITE_DRAUGHT && !pl_fight) {
         for (int j = -1; j <= 1; j += 2) {
             if (!checkBounds(row - 1, col + j))
                 continue;
