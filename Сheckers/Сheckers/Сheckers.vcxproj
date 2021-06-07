@@ -139,21 +139,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Board.cpp" />
-    <ClCompile Include="Cell.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="InOut.cpp" />
+    <ClCompile Include="CheckersBoard.cpp" />
+    <ClCompile Include="CheckersManager.cpp" />
     <ClCompile Include="Сheckers.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Board.h" />
-    <ClInclude Include="Cell.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="InOut.h" />
-    <ClInclude Include="MoveResult.h" />
-    <ClInclude Include="resource.h" />
-    <ClInclude Include="State.h" />
-    <ClInclude Include="Winner.h" />
+    <ClInclude Include="CellTypes.h" />
+    <ClInclude Include="CheckersBoard.h" />
+    <ClInclude Include="CheckersManager.h" />
+    <ClInclude Include="pch.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Сheckers.rc" />

@@ -1,12 +1,10 @@
 ﻿// Сheckers.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
 //
 
-#include <iostream>
-#include "Game.h"
-using namespace std;
+#include "pch.h"
 
-int main()
-{
-	Game game;
-	game.Start();
+int main() {
+
+	setlocale(LC_ALL, "Rus");
+	
 }
