@@ -6,9 +6,9 @@
 class Calculation
 {
 private:
-	int height = 3;
+	int height = 3;//переменная глубиы хода
 public:
-	int* profitableMove = new int[2];
+	int* profitableMove = new int[2];//массив для хранения удачных ходов
 
 	Calculation(int height = 3);//конструктор для создания глубины хода
 	~Calculation();//деструктор, для очистки памяти

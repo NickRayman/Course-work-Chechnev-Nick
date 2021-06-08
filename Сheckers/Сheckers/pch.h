@@ -8,6 +8,7 @@
 #include <Windows.h>
 #include <time.h>
 #include <stdlib.h>
+#include <string>
 
 #endif //!PCH_H
 

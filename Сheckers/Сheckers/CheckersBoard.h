@@ -1,6 +1,8 @@
 //Класс CheckersBoard.h для представления поля для игры
 #pragma once
 
+using namespace std;
+
 #include "CellTypes.h"//Подключаю перечисляемый класс (enum-CellTypes.h)
 #include "pch.h"//Подключаю класс с массой нужных нам библиотек
 

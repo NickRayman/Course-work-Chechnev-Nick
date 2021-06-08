@@ -1,6 +1,5 @@
 #include "CheckersBoard.h"
 
-using namespace std;
 
 int CheckersBoard::numberToRow(int num)
 {
@@ -354,7 +353,7 @@ int* CheckersBoard::possibleЬMoves(int from, bool fight)
     bool pl_fight = fight;
 
     //Число возмодных ходов черной дамки
-    if (cell = BLACK_KING) {
+    if (cell == BLACK_KING) {
         for (int i = -1; i <= 1; i += 2) {
             for (int j = -1; j <= 1; j += 2) {
 
@@ -385,7 +384,7 @@ int* CheckersBoard::possibleЬMoves(int from, bool fight)
     }
 
     //Число возмодных ходов черной шашки
-    if (cell = BlACK_DRAUGHT){
+    if (cell == BlACK_DRAUGHT){
         for (int j = -1; j <= 1; j += 2) {
             if (!checkBounds(row + 1, col + j))
                 continue;
@@ -411,7 +410,7 @@ int* CheckersBoard::possibleЬMoves(int from, bool fight)
     }
 
     //Число возмодных ходов белой дамки
-    if (cell = WHITE_KING) {
+    if (cell == WHITE_KING) {
         for (int i = -1; i <= 1; i += 2) {
             for (int j = -1; j <= 1; j += 2) {
 
@@ -442,7 +441,7 @@ int* CheckersBoard::possibleЬMoves(int from, bool fight)
     }
 
     //Число возмодных ходов белой шашки
-    if (cell = WHITE_DRAUGHT) {
+    if (cell == WHITE_DRAUGHT) {
         for (int j = -1; j <= 1; j += 2) {
             if (!checkBounds(row - 1, col + j))
                 continue;
