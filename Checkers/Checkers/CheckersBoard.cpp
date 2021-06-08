@@ -119,7 +119,7 @@ CheckersBoard::CheckersBoard(int pattern)
             cin >> value;
             if (value == 0)
                 break;
-            cells[numberToCol(value)][numberToCol(value)] = WHITE_DRAUGHT;
+            cells[numberToRow(value)][numberToCol(value)] = WHITE_DRAUGHT;
             whiteCells++;
         }
         while (true) {
@@ -163,8 +163,9 @@ CheckersBoard::~CheckersBoard()
 
 void CheckersBoard::display()
 {
-    system("cls");//вызов system для постоянного обновления страницы
-    cout << " -*-*-*- Нумерация клеток -*-*-*-" << endl;
+    //system("cls");//вызов system для постоянного обновления страницы
+    cout << endl;
+    cout << " *-*-*- Нумерация клеток -*-*-*" << endl;
     int cellCount = 1;
     for (int row = 0; row < boardSize; row++) {
         for (int col = 0; col < boardSize; col++) {
@@ -181,12 +182,12 @@ void CheckersBoard::display()
                 }
             }
             else
-                cout << "|  |";
+                cout << "|" << (char)(5) << (char)(5) << "|";
         }
         cout << endl;
     }
     cout << endl;
-    cout << (char)(1) << "- чёрные шашки, " << (char)(4) << "- чёрные дамки" << endl << (char)(2) << "- белые шашки, " << (char)(15) << "- белые дамки" << endl;
+    cout << (char)(1) << "- чёрные шашки, " << (char)(15) << "- чёрные дамки" << endl << (char)(2) << "- белые шашки, " << (char)(4) << "- белые дамки" << endl;
     for (int row = 0; row < boardSize; row++) {
         for (int col = 0; col < boardSize; col++) {
 
@@ -199,16 +200,16 @@ void CheckersBoard::display()
                 cout << "| " << (char)(2) << "|";
                 break;
             case WHITE:
-                cout << "|  |";
-                break;
-            case BLACK:
                 cout << "|" << (char)(5) << (char)(5) << "|";
                 break;
+            case BLACK:
+                cout << "|  |";
+                break;
             case BLACK_KING:
-                cout << "| " << (char)(4) << "|";
+                cout << "| " << (char)(15) << "|";
                 break;
             case WHITE_KING:
-                cout << "| " << (char)(15) << "|";
+                cout << "| " << (char)(4) << "|";
             }
         }
         cout << endl;
@@ -445,7 +446,7 @@ int* CheckersBoard::possibleЬMoves(int from, bool fight)
         for (int j = -1; j <= 1; j += 2) {
             if (!checkBounds(row - 1, col + j))
                 continue;
-            if (cells[row + 1][col + j] == BlACK_DRAUGHT || cells[row - 1][col + j] == BLACK_KING) {
+            if (cells[row - 1][col + j] == BlACK_DRAUGHT || cells[row - 1][col + j] == BLACK_KING) {
                 if (canBeFigth(row, col, row - 1, col + j)) {
 
                     flashes[value] = rowAndColToNum(row - 2, col + j * 2);
