@@ -56,7 +56,7 @@ bool HumanPlayer::makeMove()
 {
 	int from, to;
 	cout << "Игрок " << name << ", ваш ход!" << endl;
-	cout << "Откуда берете шащку? ";
+	cout << "Откуда берете шашку? ";
 	cin >> from;
 
 	if (!this->board->checkRegulations(from, this->cellType))

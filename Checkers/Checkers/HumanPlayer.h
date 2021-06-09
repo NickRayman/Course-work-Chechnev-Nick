@@ -17,8 +17,7 @@ public:
 	virtual ~HumanPlayer();//виртуальный деструктор
 	void setupPlayer(string name, CellTypes cellType);//функция для настройки парметров игрока
 	void setBoard(CheckersBoard* board);//функция для установки соотношений между доской и игроком
-	virtual bool makeMove();//функция для совершения хода
+	virtual bool makeMove();//функция для совершения хода игроком человеком
 	string getName();//фунция для возврата имени игрока
-
 };
 
