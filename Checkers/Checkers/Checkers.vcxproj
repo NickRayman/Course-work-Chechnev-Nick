@@ -143,6 +143,7 @@
     <ClCompile Include="Checkers.cpp" />
     <ClCompile Include="CheckersBoard.cpp" />
     <ClCompile Include="CheckersManager.cpp" />
+    <ClCompile Include="ComputerPlayer.cpp" />
     <ClCompile Include="HumanPlayer.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="CellTypes.h" />
     <ClInclude Include="CheckersBoard.h" />
     <ClInclude Include="CheckersManager.h" />
+    <ClInclude Include="ComputerPlayer.h" />
     <ClInclude Include="HumanPlayer.h" />
     <ClInclude Include="pch.h" />
   </ItemGroup>

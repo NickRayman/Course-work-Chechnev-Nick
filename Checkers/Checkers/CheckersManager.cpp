@@ -39,9 +39,9 @@ bool CheckersManager::init()
 	this->board = new CheckersBoard(type);
 
 	int pType = 0;
-	while (pType != 1) {
+	while (pType != 1 && pType != 2) {
 
-		cout << "Выберите тип игрока, играющего чёрными шашками (Человек - 1, ИИ пока разработке - 2): ";
+		cout << "Выберите тип игрока, играющего чёрными шашками (Человек - 1, ИИ - 2): ";
 		cin >> pType;
 		if (pType == 1) {
 			cin.ignore();
@@ -51,15 +51,16 @@ bool CheckersManager::init()
 			player1->setupPlayer(playerName, BlACK_DRAUGHT);
 		}
 		else if (pType == 2) {
-			//nothing
+			player1 = new ComputerPlayer();
+			player1->setupPlayer("Computer_Kesha", BlACK_DRAUGHT);
 		}
 		player1->setBoard(this->board);
 	}
 
 	pType = 0;
-	while (pType != 1) {
+	while (pType != 1 && pType != 2) {
 
-		cout << "Выберите тип игрока, играющего белыми шашками (Человек - 1, ИИ пока разработке - 2): ";
+		cout << "Выберите тип игрока, играющего белыми шашками (Человек - 1, ИИ - 2): ";
 		cin >> pType;
 		if (pType == 1) {
 			while (true) {
@@ -75,7 +76,8 @@ bool CheckersManager::init()
 			player2->setupPlayer(playerName, WHITE_DRAUGHT);
 		}
 		else if (pType == 2) {
-			//nothing
+			player2 = new ComputerPlayer();
+			player2->setupPlayer("Computer_Kesha", WHITE_DRAUGHT);
 		}
 		player2->setBoard(this->board);
 	}
@@ -140,9 +142,9 @@ void CheckersManager::makeMove()
 	if (this->board->checkEndGame()) {
 
 		cout << "Ходов совершено: " << moves << endl;
-		cout << "************************************************" << endl;
+		cout << "*********************************************************" << endl;
 		cout << "*-*-*-*-*-*-* Игрок " << currentPlayer->getName() << " победил! *-*-*-*-*-*-*" << endl;
-		cout << "************************************************" << endl;
+		cout << "*********************************************************" << endl;
 
 		this->bGameFinished = true;
 		return;

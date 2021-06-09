@@ -3,6 +3,7 @@
 
 #include "CheckersBoard.h"//Подключаю класс CheckersBoard.h для представления поля для игры/
 #include "HumanPlayer.h"//Подключаю класс HumanPlayer.h для добавления игрока-человека
+#include "ComputerPlayer.h"//Подключаю класс ComputerPlayer.h для добавления компьютерного игрока
 class CheckersManager
 {
 private:
