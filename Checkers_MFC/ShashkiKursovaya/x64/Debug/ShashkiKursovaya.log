@@ -1,0 +1,10 @@
+﻿  pch.cpp
+  CheckersBoard.cpp
+  CheckersManager.cpp
+  CheckersPlayer.cpp
+  CStartupDlg.cpp
+  ShashkiKursovaya.cpp
+  ShashkiKursovayaDlg.cpp
+C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Checkers_MFC\ShashkiKursovaya\ShashkiKursovayaDlg.cpp(186,11): warning C4244: инициализация: преобразование "INT_PTR" в "int", возможна потеря данных
+  Создание кода...
+  ShashkiKursovaya.vcxproj -> C:\Users\kolya\Desktop\Учеба\2 курс\2 семестр 2021\Программирование\Курсовик\Checkers_MFC\x64\Debug\ShashkiKursovaya.exe
